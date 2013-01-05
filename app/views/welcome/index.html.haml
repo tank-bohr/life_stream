@@ -1,0 +1,7 @@
+%table
+  %thead
+  %tdata
+    - @dim.times do |i|
+      %tr
+        - @dim.times do |j|
+          %td.cell.dead{i: i, j: j}
