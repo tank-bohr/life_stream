@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '1.9.3', engine: 'rbx', engine_version: '2.0.0.rc1'
 
 gem 'rails',   github: 'rails'
 gem 'journey', github: 'rails/journey'

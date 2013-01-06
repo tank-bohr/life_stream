@@ -14,7 +14,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 0aadca2d8392c197cbda45188b461d6d686ca24e
+  revision: 7d365135a3d39f24e4ae8bb594107aa4e7bdda73
   specs:
     actionmailer (4.0.0.beta)
       actionpack (= 4.0.0.beta)
@@ -66,7 +66,7 @@ GIT
 
 GIT
   remote: git://github.com/tank-bohr/life.git
-  revision: 071f5d22955c2ba3e38bc425ed56d965c8f24ecc
+  revision: a24e5578146766db6abd98bc587bf9f6ce824133
   specs:
     life (0.1.0)
 
