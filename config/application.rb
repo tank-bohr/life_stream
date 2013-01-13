@@ -64,5 +64,9 @@ module LifeStream
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Allow parallel requests
+    config.preload_frameworks = true
+    config.allow_concurrency = true
   end
 end
