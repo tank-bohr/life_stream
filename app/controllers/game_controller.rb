@@ -7,17 +7,19 @@ class GameController < ApplicationController
     # SSE expects the `text/event-stream` content type
     response.headers['Content-Type'] = 'text/event-stream'
     sse = LifeStream::SSE.new(response.stream)
-    world = Life::World.new([
-      [0, 0, 0, 0],
-      [0, 1, 1, 1],
-      [1, 1, 1, 0],
-      [0, 0, 0, 0],
-    ])
+
+    first_generation = Life::PatternLoader.pattern(params[:pattern])
+    world = Life::World.new(first_generation)
+    delay = params[:delay].try(:to_f) || 1
     begin
+      sse.write({
+        rows: first_generation.count,
+        columns: first_generation[0].count
+      }, event: 'build')
       loop do
         world.next_generation!
         sse.write({world: world.to_a}, event: 'update')
-        sleep 1
+        sleep delay
       end
     rescue IOError
       # When the client disconnects, we'll get an IOError on write

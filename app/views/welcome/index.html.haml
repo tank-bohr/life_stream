@@ -1,7 +1,1 @@
-%table
-  %thead
-  %tdata
-    - @dim.times do |i|
-      %tr
-        - @dim.times do |j|
-          %td.cell.dead{i: i, j: j}
+%table#world{'data-pattern' => params[:pattern], 'data-delay' => params[:delay]}
