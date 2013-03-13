@@ -20,6 +20,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'haml', github: 'haml', branch: 'stable'
 gem 'haml-rails'
 gem 'pry-rails'
 

@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/haml/haml.git
+  revision: ae9c15890e3ebff69cd2fec5c9f069da9ec08320
+  branch: stable
+  specs:
+    haml (4.0.1.rc.1)
+      tilt
+
+GIT
   remote: git://github.com/tank-bohr/life.git
   revision: 33e0bfc36bcb84748696096a2c7991a81364e392
   specs:
@@ -51,8 +59,6 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    haml (4.0.0)
-      tilt
     haml-rails (0.4)
       actionpack (>= 3.1, < 4.1)
       activesupport (>= 3.1, < 4.1)
@@ -139,6 +145,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0.beta1)
+  haml!
   haml-rails
   jquery-rails
   life!
