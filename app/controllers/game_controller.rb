@@ -6,7 +6,7 @@ class GameController < ApplicationController
   def index
     # SSE expects the `text/event-stream` content type
     response.headers['Content-Type'] = 'text/event-stream'
-    sse = LifeStream::SSE.new(response.stream)
+    sse = ServerSideEvent.new(response.stream)
 
     first_generation = Life::PatternLoader.pattern(params[:pattern])
     world = Life::World.new(first_generation)
